@@ -10,6 +10,9 @@ const GameBoard = () => {
   let{state,dispatch}=useContext(pageContext)
   const [count, setCount] = useState(10);
 
+  let {answer,guessArray} = questionsArray[state.questionNumber]
+
+
   let buttonLocations=["12.5%","37.5%","62.5%","87.5%"]
   return ( 
     <GameBoardStyled>
@@ -18,17 +21,27 @@ const GameBoard = () => {
 
 
       {!state.gameMenuOpen &&
-      buttonLocations.map((shipLocFromArr,questionNumbArrIndex)=>{
+      buttonLocations.map((shipLocFromArr,buttonIndex)=>{
         return ( 
         <div className="columns">
-          {state.shipPosition!==shipLocFromArr&&
+          {state.shipPosition!==shipLocFromArr?
           
           <button className="answerButtons" onClick={()=>{
-            dispatch({type:ACTION.shipPosition,newShipPosition:shipLocFromArr})
+
+            if(answer===buttonIndex){
+          
+            dispatch({type:ACTION.shipPosition,newShipPosition:shipLocFromArr /* update the reducer with the next ship location from the index */})
             setCount(0)
+            }else{
+              console.log("wrong")
+            }
             }}>
-            {questionsArray[state.questionNumber].guessArray[questionsArray.answer]}
+
+          
+            {guessArray[buttonIndex] /* title for buttons */}
           </button>
+          :
+          ""
           } 
           
         </div>

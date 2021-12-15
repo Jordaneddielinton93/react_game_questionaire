@@ -16,7 +16,7 @@ export const HeadButtonStyled=styled.div`
     border-bottom-left-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 1.5s;
     z-index: 12;
     &:hover{
       color: #8F8247;
@@ -24,5 +24,6 @@ export const HeadButtonStyled=styled.div`
       margin-left: 10px;
       border-bottom-right-radius: 0px;
       letter-spacing: 7px;
+      box-shadow: 0 0 60px 10px rgba(0,147,233, 0.72), -14px -15px 40px -10px rgba(128,208,199, 0.23);
     }
 `

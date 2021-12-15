@@ -6,7 +6,7 @@ position: relative;
 overflow: hidden;
 max-width: 100vw;
 height: 100%;
-z-index: 12;
+z-index: 5;
 
 .planet{
   width:700px;
@@ -18,7 +18,7 @@ z-index: 12;
   left:70%;
   top:30%;
   margin:-150px;
-  z-index: 10;
+  z-index: 5;
 }
 .planet .mask{
   width:100%;

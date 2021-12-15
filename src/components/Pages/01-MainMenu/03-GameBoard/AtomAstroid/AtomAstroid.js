@@ -19,12 +19,14 @@ const AtomAstroid = ({setCount,count}) => {
         dispatch({type:ACTION.OPEN_MENU})
       }
       
-    }, 3000);
+    }, 1600);
   },[timer]);
 
   return ( 
     <AtomAstroidStyled>
-      <img srcset={Astroid} alt="astroidrock" width="100px" style={{position:"absolute",left:state.shipPosition,top:`${count}%`,transition:"0.5s"}} />
+      <img srcset={Astroid} alt="astroidrock" width="100px" style={{position:"absolute",left:state.shipPosition,top:`${count}%`,transition:"0.5s",zIndex:35}}
+      
+      />
     </AtomAstroidStyled>
    );
 }

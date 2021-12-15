@@ -11,7 +11,9 @@ export let inistialState = {
   playerName:"",
   shipPosition:"37.5%",
   shipColor:"white",
-  questionNumber:0
+  questionNumber:0,
+  score:0,
+  topScore:0
 }
 
 export function reducer(state,action){
@@ -23,13 +25,17 @@ export function reducer(state,action){
       } 
     case ACTION.OPEN_MENU:
       return {...state,
-        gameMenuOpen:true
+        gameMenuOpen:true,
+        shipPosition:"37.5%",
+        questionNumber:0,
+        score:0
       } 
 
     case ACTION.shipPosition:
       return {...state,
         shipPosition:action.newShipPosition,
-        questionNumber:state.questionNumber+1
+        questionNumber:state.questionNumber+1,
+        score:state.score+10
       }
 
     case ACTION.SHIP_COLOR:

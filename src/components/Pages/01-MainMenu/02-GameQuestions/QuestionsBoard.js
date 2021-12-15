@@ -17,12 +17,13 @@ const QuestionsBoard = () => {
     position: "absolute",
     bottom:0,
     width: `${state.gameMenuOpen?"0px":"100vw"}`,
-    height: "50px",
-    backgroundImage: "linear-gradient(to left, rgba(255,0,0,0), #0093E9)",
+    height:"7.5vh",
+    backgroundImage: "linear-gradient( rgba(255,0,0,0), #0093E9)",
     display:"flex",
     justifyContent:"space-around",
     alignItems:"center",
-    transition:"1s"
+    transition:"1s",
+    
     }
 
   return ( 
