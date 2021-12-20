@@ -20,7 +20,8 @@ const AtomAstroid = ({setCount,count}) => {
       }else{
         console.log("game over")
         setCount(0)
-        dispatch({type:ACTION.OPEN_MENU})
+        // here
+        dispatch({type:ACTION.GAME_OVER_MENU})
       }
       
     }, 1800);

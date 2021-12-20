@@ -4,7 +4,8 @@ export let ACTION={
   shipPosition:"SHIP_POSITION",
   SHIP_COLOR:"SHIP_COLOR",
   OPEN_MENU:"OPEN_MENU",
-  SCORE_MENU:"SCORE_MENU"
+  SCORE_MENU:"SCORE_MENU",
+  GAME_OVER_MENU:"GAME_OVER_MENU"
 }
 
 export let inistialState = {
@@ -15,7 +16,8 @@ export let inistialState = {
   shipColor:"white",
   questionNumber:0,
   score:0,
-  topScore:0
+  topScore:0,
+  gameOverPopup:false
 }
 
 export function reducer(state,action){
@@ -30,7 +32,8 @@ export function reducer(state,action){
         gameMenuOpen:true,
         shipPosition:"37.5%",
         questionNumber:0,
-        score:0
+        score:0,
+        gameOverPopup:false
       } 
 
     case ACTION.shipPosition:
@@ -46,10 +49,17 @@ export function reducer(state,action){
       return {...state,
         shipColor:colors[action.colorNumber]
       }
+
     case ACTION.SCORE_MENU:
       console.log(state.scoreMenuOpen)
       return {...state,
         scoreMenuOpen:!state.scoreMenuOpen
+      }
+
+    case ACTION.GAME_OVER_MENU:
+      console.log(state.gameOverPopup)
+      return {...state,
+        gameOverPopup:!state.gameOverPopup
       }
     default:
       break;

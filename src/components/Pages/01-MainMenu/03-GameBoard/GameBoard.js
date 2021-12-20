@@ -4,6 +4,7 @@ import { ACTION } from "../../../Hooks/useReducer";
 import { questionsArray } from "../02-GameQuestions/QuestionsArray";
 import AtomAstroid from "./AtomAstroid/AtomAstroid";
 import { GameBoardStyled } from "./GameBoard.style";
+import GameOver from "./GameOverPopup.js/GameOver";
 import SpaceShip from "./SpaceShip/SpaceShip";
 
 const GameBoard = () => {
@@ -16,6 +17,8 @@ const GameBoard = () => {
   let buttonLocations=["12.5%","37.5%","62.5%","87.5%"]
   return ( 
     <GameBoardStyled>
+      {state.gameOverPopup&&<GameOver/>}
+    
 
       {!state.gameMenuOpen &&<AtomAstroid count={count} setCount={setCount}/>}
 
