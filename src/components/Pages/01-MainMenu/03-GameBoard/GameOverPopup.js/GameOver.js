@@ -5,16 +5,17 @@ import HeadButtons from "../../01-Headings/HeadButtons/HeadButtons";
 import { GameOverStyled } from "./GameOver.style";
 
 const GameOver = () => {
-  let{state,dispatch}=useContext(pageContext)
+  let{dispatch}=useContext(pageContext)
 
   return ( 
     <GameOverStyled>
       <div className="gameoverBox">
 
         <h1>Game Over</h1>
-        
-        <h1 onClick={()=>dispatch({type:ACTION.OPEN_MENU})}>
-          Okay
+
+        <h1 className="confirm"
+         onClick={()=>dispatch({type:ACTION.OPEN_MENU})}>
+          Confirm
         </h1>
       
       </div>
