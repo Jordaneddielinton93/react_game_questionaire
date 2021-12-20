@@ -22,7 +22,7 @@ export let questionsArray=[
   },
 ////////////////////////Question-2 ^^^^^///////////////////////////////
   {
-    question:"Q3: what hook is used for state manages ",
+    question:"Q3: what hook is used for state management ",
     answer:0,
     guessArray:[
       "useReducer",
@@ -56,7 +56,7 @@ export let questionsArray=[
 ////////////////////////Question-5 ^^^^^///////////////////////////////
 {
   question:"Q6: What problem does useContext solve ",
-  answer:3,
+  answer:1,
   guessArray:[
     "helps update inline styles color ",
     "Stops prop drilling",
@@ -65,5 +65,57 @@ export let questionsArray=[
   ]
 },
 ////////////////////////Question-5 ^^^^^///////////////////////////////
+{
+  question:"Q7: What does S.A.P stand for ",
+  answer:0,
+  guessArray:[
+    "Single Page Application",
+    "",
+    "Sytax Portioned Application",
+    "Serious Proper Application"
+  ]
+},
+{
+  question:"Q8: useEffect is used to.. ",
+  answer:3,
+  guessArray:[
+    "",
+    "Effect the DOM ",
+    "be effective with classes",
+    "eliminate side-effects"
+  ]
+},
+{
+  question:"Q9: JSX allows you to.. ",
+  answer:2,
+  guessArray:[
+    "add multiple id atrributes",
+    "use react without a transpiler",
+    "write HTML within JavaScript",
+    ""
+  ]
+},
 
+{
+  question:"Q9: 'npx creat-react-app .' offers",
+  answer:3,
+  guessArray:[
+    "a reactive database",
+    "a great middleware solution",
+    "",
+    "a quick startup build of react"
+  ]
+},
+
+
+{
+  question:"",
+  answer:4,
+  guessArray:[
+    "",
+    "",
+    "",
+    ""
+  ]
+},
 ]

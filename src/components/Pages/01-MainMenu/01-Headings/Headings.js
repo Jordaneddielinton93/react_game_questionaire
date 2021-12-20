@@ -36,6 +36,10 @@ let{state,dispatch}=useContext(pageContext)
         isHtml_text_Tag={true}
         title={"Ship Color"}
         handleClick={()=>dispatch({type:ACTION.SHIP_COLOR,colorNumber:changeColor()})}/>
+      <HeadButtons 
+        isHtml_text_Tag={true}
+        title={"Score Board"}
+        />
       <SpaceShip/>
       
     </HeadingStyle>

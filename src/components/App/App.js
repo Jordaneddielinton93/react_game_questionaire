@@ -5,12 +5,16 @@ import MainMenu from '../Pages/01-MainMenu/00-MainMenu';
 import { useReducer } from 'react';
 import { inistialState, reducer } from '../Hooks/useReducer';
 import React from "react"
+import useFetch from '../Hooks/useFetch';
 
 
 export let pageContext= React.createContext()
 function App() {
 
   let [state,dispatch]=useReducer(reducer,inistialState)
+  
+  
+  
 
   console.log(state)
   return (

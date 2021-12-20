@@ -26,7 +26,7 @@ const GameBoard = () => {
         <div className="columns">
           {state.shipPosition!==shipLocFromArr?
           
-          <button className="answerButtons" onClick={()=>{
+          <button className="answerButtons" data-testid="answerButton" onClick={()=>{
 
             if(answer===buttonIndex){
           

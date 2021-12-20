@@ -1,9 +1,14 @@
 import { useContext } from "react";
 import { pageContext } from "../../../App/App";
+import useFetch from "../../../Hooks/useFetch";
 
 const ScoreBoard = () => {
   let{state}=useContext(pageContext)
+  let [data]=useFetch("https://react-questionnaire-space-game.herokuapp.com/scores")
 
+  let topScore=data.sort(function(a, b){return b.user_score-a.user_score})
+
+  console.log(topScore)
   let displayText={
     display:`${state.gameMenuOpen?"none":"block"}`,
     fontSize:`${state.gameMenuOpen?"0":"2rem"}`,
@@ -30,7 +35,7 @@ const ScoreBoard = () => {
 
       <h1 style={displayText} >Player : Sgt {state.playerName}</h1>
       <h1 style={displayText} >Score: {state.score} points</h1>
-      <h1 style={displayText}>Top Score: {1}</h1>
+      <h1 style={displayText}>Top Score: {topScore.length&&topScore[0].user_score}</h1>
     </div>
    );
 }
