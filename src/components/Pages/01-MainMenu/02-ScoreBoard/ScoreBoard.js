@@ -3,8 +3,8 @@ import { pageContext } from "../../../App/App";
 import useFetch from "../../../Hooks/useFetch";
 
 const ScoreBoard = () => {
-  let{state}=useContext(pageContext)
-  let [data]=useFetch("https://react-questionnaire-space-game.herokuapp.com/scores")
+  let{state,data}=useContext(pageContext)
+  
 
   let topScore=data.sort(function(a, b){return b.user_score-a.user_score})
 

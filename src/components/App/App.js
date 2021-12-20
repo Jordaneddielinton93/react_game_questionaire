@@ -12,14 +12,14 @@ export let pageContext= React.createContext()
 function App() {
 
   let [state,dispatch]=useReducer(reducer,inistialState)
-  
+  let [data]=useFetch("https://react-questionnaire-space-game.herokuapp.com/scores")
   
   
 
   console.log(state)
   return (
     <div className="App">
-      <pageContext.Provider value={{state,dispatch}}>
+      <pageContext.Provider value={{state,dispatch,data}}>
       <Routes>
         <Route path="/" element={<MainMenu />} />
         {/* <Route path="about" element={} /> */}

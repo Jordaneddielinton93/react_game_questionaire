@@ -3,11 +3,13 @@ export let ACTION={
   startGameButtton:"START_GAME_BUTTON",
   shipPosition:"SHIP_POSITION",
   SHIP_COLOR:"SHIP_COLOR",
-  OPEN_MENU:"OPEN_MENU"
+  OPEN_MENU:"OPEN_MENU",
+  SCORE_MENU:"SCORE_MENU"
 }
 
 export let inistialState = {
   gameMenuOpen:true,
+  scoreMenuOpen:false,
   playerName:"",
   shipPosition:"37.5%",
   shipColor:"white",
@@ -43,6 +45,11 @@ export function reducer(state,action){
       console.log(action.colorNumber)
       return {...state,
         shipColor:colors[action.colorNumber]
+      }
+    case ACTION.SCORE_MENU:
+      console.log(state.scoreMenuOpen)
+      return {...state,
+        scoreMenuOpen:!state.scoreMenuOpen
       }
     default:
       break;

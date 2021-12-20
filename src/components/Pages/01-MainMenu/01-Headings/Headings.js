@@ -4,6 +4,7 @@ import { ACTION } from "../../../Hooks/useReducer";
 import { HeadingStyle } from "./Headings.style";
 import HeadButtons from "./HeadButtons/HeadButtons";
 import SpaceShip from "../03-GameBoard/SpaceShip/SpaceShip";
+import ScoreMenu from "./ScoreMenu/ScoreMenu";
 
 const Headings = () => {
 let{state,dispatch}=useContext(pageContext)
@@ -19,29 +20,36 @@ let{state,dispatch}=useContext(pageContext)
 
   return ( 
     <HeadingStyle menuWidth={state.gameMenuOpen}>
-
-      <HeadButtons
-        isHtml_text_Tag={true}
-       title={"SCHOOL OF CODE"}/>
-
-      <HeadButtons 
-        isHtml_text_Tag={true}
-        title={"Play Game"}
-        handleClick={()=>dispatch({type:ACTION.startGameButtton,newPlayerName:userName.current.value})}/>
-      <HeadButtons
-        isHtml_text_Tag={false}
-        userName={userName}
-      />
-      <HeadButtons 
-        isHtml_text_Tag={true}
-        title={"Ship Color"}
-        handleClick={()=>dispatch({type:ACTION.SHIP_COLOR,colorNumber:changeColor()})}/>
-      <HeadButtons 
-        isHtml_text_Tag={true}
-        title={"Score Board"}
-        />
-      <SpaceShip/>
+      {state.scoreMenuOpen?
       
+      <ScoreMenu/>
+      :
+      <>
+        <HeadButtons
+          isHtml_text_Tag={true}
+        title={"SCHOOL OF CODE"}/>
+
+        <HeadButtons 
+          isHtml_text_Tag={true}
+          title={"Play Game"}
+          handleClick={()=>dispatch({type:ACTION.startGameButtton,newPlayerName:userName.current.value})}/>
+        <HeadButtons
+          isHtml_text_Tag={false}
+          userName={userName}
+        />
+        <HeadButtons 
+          isHtml_text_Tag={true}
+          title={"Score Board"}
+          handleClick={()=>dispatch({type:ACTION.SCORE_MENU})}
+          />
+        <HeadButtons 
+          isHtml_text_Tag={true}
+          title={"Ship Color"}
+          handleClick={()=>dispatch({type:ACTION.SHIP_COLOR,colorNumber:changeColor()})}/>
+        
+        <SpaceShip/>
+      </>
+    }
     </HeadingStyle>
    );
 }

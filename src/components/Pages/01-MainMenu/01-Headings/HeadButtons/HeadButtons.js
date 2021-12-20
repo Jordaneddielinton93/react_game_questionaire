@@ -3,6 +3,11 @@ import { pageContext } from "../../../../App/App";
 import { HeadButtonStyled } from "./HeadButtons.style";
 
 
+  
+
+  const HeadButtons = ({title,handleClick,isHtml_text_Tag,userName,fontsize}) => {
+  let{state}=useContext(pageContext)
+
   const inputStyle={
     width:"100%",
     height:"80%",
@@ -13,17 +18,13 @@ import { HeadButtonStyled } from "./HeadButtons.style";
     color:"white",
     border:"none"
   }
-
-  const HeadButtons = ({title,handleClick,isHtml_text_Tag,userName}) => {
-  let{state}=useContext(pageContext)
-
   
   return ( 
     <HeadButtonStyled 
       onClick={handleClick} 
       showButtons={state.gameMenuOpen}>
       {isHtml_text_Tag? 
-      title
+      <h4 style={{fontSize:fontsize?"1.2rem":"2rem",}}>{title}</h4> 
 
       : 
       

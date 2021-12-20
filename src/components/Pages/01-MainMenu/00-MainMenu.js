@@ -17,6 +17,7 @@ const MainMenu = () => {
       <div className="clouds"></div>
       <QuestionsBoard/>
       <GameBoard/>
+     
     </MainMenuStyled>
    );
 }
