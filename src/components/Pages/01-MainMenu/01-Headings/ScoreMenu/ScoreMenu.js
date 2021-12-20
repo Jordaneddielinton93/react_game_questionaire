@@ -10,6 +10,12 @@ let{data,dispatch}=useContext(pageContext)
   return ( 
     <ScoreMenuStyled>
 
+<HeadButtons 
+          isHtml_text_Tag={true}
+          title={"Home Screen"}
+          handleClick={()=>dispatch({type:ACTION.SCORE_MENU})}
+          />
+
     {data.map(({user_name,user_score})=>{
       return <HeadButtons 
       isHtml_text_Tag={true}
@@ -17,11 +23,7 @@ let{data,dispatch}=useContext(pageContext)
       title={`NAME: ${user_name} SCORE:${user_score}`}
       />
     })}
-    <HeadButtons 
-          isHtml_text_Tag={true}
-          title={"Home Screen"}
-          handleClick={()=>dispatch({type:ACTION.SCORE_MENU})}
-          />
+    
       
     </ScoreMenuStyled>
    );
