@@ -4,7 +4,7 @@ import { ACTION } from "../../../Hooks/useReducer";
 import { HeadingStyle } from "./Headings.style";
 import HeadButtons from "./HeadButtons/HeadButtons";
 import SpaceShip from "../03-GameBoard/SpaceShip/SpaceShip";
-import ScoreMenu from "./ScoreMenu/ScoreMenu";
+import ScoreMenu from "./ScoreLeaderBoards/ScoreMenu";
 
 const Headings = () => {
 let{state,dispatch}=useContext(pageContext)

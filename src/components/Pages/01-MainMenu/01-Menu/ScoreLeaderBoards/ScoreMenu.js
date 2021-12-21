@@ -10,7 +10,7 @@ let{data,dispatch}=useContext(pageContext)
   return ( 
     <ScoreMenuStyled>
 
-<HeadButtons 
+      <HeadButtons 
           isHtml_text_Tag={true}
           title={"Home Screen"}
           handleClick={()=>dispatch({type:ACTION.SCORE_MENU})}

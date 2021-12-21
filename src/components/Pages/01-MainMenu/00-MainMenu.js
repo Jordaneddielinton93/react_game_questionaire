@@ -1,5 +1,5 @@
 import { MainMenuStyled } from "./00-MainMenu.style";
-import Headings from "./01-Headings/Headings";
+import Headings from "./01-Menu/Headings";
 import Planet from "./01-Planet/Planet";
 import QuestionsBoard from "./02-GameQuestions/QuestionsBoard";
 import ScoreBoard from "./02-ScoreBoard/ScoreBoard";
