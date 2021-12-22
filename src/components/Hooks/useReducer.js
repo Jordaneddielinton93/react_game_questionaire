@@ -5,7 +5,8 @@ export let ACTION={
   SHIP_COLOR:"SHIP_COLOR",
   OPEN_MENU:"OPEN_MENU",
   SCORE_MENU:"SCORE_MENU",
-  GAME_OVER_MENU:"GAME_OVER_MENU"
+  GAME_OVER_MENU:"GAME_OVER_MENU",
+  WRONG_ANSWER:"WRONG_ANSWER"
 }
 
 export let inistialState = {
@@ -17,7 +18,7 @@ export let inistialState = {
   questionNumber:0,
   score:0,
   topScore:0,
-  gameOverPopup:false
+  gameOverPopup:false,
 }
 
 export function reducer(state,action){
@@ -60,6 +61,10 @@ export function reducer(state,action){
       console.log(state.gameOverPopup)
       return {...state,
         gameOverPopup:!state.gameOverPopup
+      }
+    case ACTION.WRONG_ANSWER:
+      return {...state,
+        score:state.score-10
       }
     default:
       break;

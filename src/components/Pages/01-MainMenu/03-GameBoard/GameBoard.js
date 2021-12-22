@@ -36,7 +36,7 @@ const GameBoard = () => {
             dispatch({type:ACTION.shipPosition,newShipPosition:shipLocFromArr /* update the reducer with the next ship location from the index */})
             setCount(0)
             }else{
-              console.log("wrong")
+              dispatch({type:ACTION.WRONG_ANSWER/* update the reducer with the next ship location from the index */})
             }
             }}>
 

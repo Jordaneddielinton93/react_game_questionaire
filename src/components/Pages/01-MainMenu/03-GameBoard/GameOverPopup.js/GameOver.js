@@ -4,7 +4,7 @@ import { ACTION } from "../../../../Hooks/useReducer";
 import { GameOverStyled } from "./GameOver.style";
 
 async function callApi(prev_user_id,user_name,user_score){
-  let response=await fetch(`https://react-questionnaire-space-game.herokuapp.com/scores/${prev_user_id}`,{
+  await fetch(`https://react-questionnaire-space-game.herokuapp.com/scores/${prev_user_id}`,{
     method: 'PUT', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     headers: {
@@ -16,8 +16,6 @@ async function callApi(prev_user_id,user_name,user_score){
       "user_score":user_score
       })
   })
-  let data=await response.json()
-  console.log(data)
 }
 
 const GameOver = () => {
