@@ -5,7 +5,7 @@ import { HeadButtonStyled } from "./HeadButtons.style";
 
   
 
-  const HeadButtons = ({title,handleClick,isHtml_text_Tag,userName,fontsize}) => {
+  const HeadButtons = ({title,handleClick,isHtml_text_Tag,userName,fontsize,border}) => {
   let{state}=useContext(pageContext)
 
   const inputStyle={
@@ -16,7 +16,7 @@ import { HeadButtonStyled } from "./HeadButtons.style";
     textAlign:"center",
     fontSize:"1.5rem",
     color:"white",
-    border:"none"
+    border:border
   }
   
   return ( 

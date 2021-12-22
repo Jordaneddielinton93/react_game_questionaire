@@ -12,7 +12,7 @@ export let ACTION={
 export let inistialState = {
   gameMenuOpen:true,
   scoreMenuOpen:false,
-  playerName:"no-name",
+  playerName:"",
   shipPosition:"37.5%",
   shipColor:"white",
   questionNumber:0,

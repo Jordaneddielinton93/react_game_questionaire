@@ -9,9 +9,10 @@ import ScoreMenu from "./ScoreLeaderBoards/ScoreMenu";
 const Headings = () => {
 let{state,dispatch}=useContext(pageContext)
 
-  let userName=useRef("Chris")
+  let userName=useRef("")
   
   let [color,setColor]=useState(0)
+  let [border,setborder]=useState("none")
   
   function changeColor(){
     color<4?setColor(color+1):setColor(0)
@@ -28,24 +29,36 @@ let{state,dispatch}=useContext(pageContext)
         <HeadButtons
           isHtml_text_Tag={true}
         title={"SCHOOL OF CODE"}/>
+        border={"none"}
 
         <HeadButtons 
           isHtml_text_Tag={true}
           title={"Play Game"}
-          handleClick={()=>dispatch({type:ACTION.startGameButtton,newPlayerName:userName.current.value})}/>
+          border={"none"}
+          handleClick={()=>{
+            if(userName.current.value.length<=0){
+              return setborder("solid thick red")
+            }
+            setborder("none")
+            dispatch({type:ACTION.startGameButtton,newPlayerName:userName.current.value})
+            
+            }}/>
         <HeadButtons
           isHtml_text_Tag={false}
           userName={userName}
+          border={border}
         />
         <HeadButtons 
           isHtml_text_Tag={true}
           title={"Score Board"}
           handleClick={()=>dispatch({type:ACTION.SCORE_MENU})}
+          border={"none"}
           />
         <HeadButtons 
           isHtml_text_Tag={true}
           title={"Ship Color"}
           handleClick={()=>dispatch({type:ACTION.SHIP_COLOR,colorNumber:changeColor()})}/>
+          border={"none"}
         
         <SpaceShip/>
       </>
