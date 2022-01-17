@@ -64,7 +64,7 @@ export let questionsArray=[
     ""
   ]
 },
-////////////////////////Question-5 ^^^^^///////////////////////////////
+////////////////////////Question-6 ^^^^^///////////////////////////////
 {
   question:"Q7: What does S.A.P stand for ",
   answer:0,
@@ -75,6 +75,8 @@ export let questionsArray=[
     "Serious Proper Application"
   ]
 },
+////////////////////////Question-7 ^^^^^///////////////////////////////
+
 {
   question:"Q8: useEffect is used to.. ",
   answer:3,
@@ -85,6 +87,8 @@ export let questionsArray=[
     "eliminate side-effects"
   ]
 },
+////////////////////////Question-8 ^^^^^///////////////////////////////
+
 {
   question:"Q9: JSX allows you to.. ",
   answer:2,
@@ -95,6 +99,7 @@ export let questionsArray=[
     ""
   ]
 },
+////////////////////////Question-9 ^^^^^///////////////////////////////
 
 {
   question:"Q9: 'npx creat-react-app .' offers",
@@ -106,16 +111,79 @@ export let questionsArray=[
     "a quick startup build of react"
   ]
 },
+////////////////////////Question-10 ^^^^^///////////////////////////////
 
 
 {
-  question:"",
-  answer:4,
+  question:"React is a free and opne-source front-end....",
+  answer:0,
   guessArray:[
-    "",
-    "",
-    "",
+    "JavaScript library",
+    "Bootstrap library",
+    "CSS library",
     ""
   ]
 },
+////////////////////////Question-11 ^^^^^///////////////////////////////
+
+{
+  question:"React was initially released in....",
+  answer:1,
+  guessArray:[
+    "",
+    "May 29,2013",
+    "arpil 29,2013",
+    "Dec 29,2013"
+  ]
+},
+////////////////////////Question-12 ^^^^^///////////////////////////////
+
+{
+  question:"what is used to increase performance",
+  answer:3,
+  guessArray:[
+    "Virtual Reality",
+    "",
+    "Original DOM",
+    "Virtual DOM"
+  ]
+},
+////////////////////////Question-13 ^^^^^///////////////////////////////
+
+{
+  question:"Babel is a ??",
+  answer:1,
+  guessArray:[
+    "interpreter",
+    "Transpiler",
+    "Compliler",
+    ""
+  ]
+},
+////////////////////////Question-14 ^^^^^///////////////////////////////
+
+{
+  question:"how many elements can react component return",
+  answer:2,
+  guessArray:[
+    "3",
+    "",
+    "1",
+    "any"
+  ]
+},
+////////////////////////Question-15 ^^^^^///////////////////////////////
+
+{
+  question:"In react what is used to pass data down a component" ,
+  answer:0,
+  guessArray:[
+    "props",
+    "renderer",
+    "",
+    "setState"
+  ]
+},
+////////////////////////Question-16 ^^^^^///////////////////////////////
+
 ]
